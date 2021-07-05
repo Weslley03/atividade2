@@ -1,0 +1,30 @@
+@model List<ItemPedido>
+
+<h2>Listagem de Pedidos</h2>
+
+<table border="1">
+
+    <thead>
+        <tr>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Valor Unitário</th>
+        </tr>
+    </thead>
+
+<tbody>
+
+    @foreach (ItemPedido item in Model)
+    {
+        <tr>
+            <td>@item.descricao</td>
+            <td>@item.quantidade</td>
+            <td>@item.valorUnitario</td>
+        </tr>
+    }
+
+</tbody>
+
+</table>
+
+<p>Listagem de produto é: @Dados.PedidoAtual.TotalizarPedido()</p>
